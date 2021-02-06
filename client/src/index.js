@@ -4,9 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Router, Route } from 'react-router-dom';
+import { history } from './config/network';
+
+import 'antd/dist/antd.css';
+import 'font-awesome/css/font-awesome.min.css';
+
+const router = (
+  <Router history={history}>
+    <Route component={App} />
+  </Router>
+);
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {router}
   </React.StrictMode>,
   document.getElementById('root')
 );
