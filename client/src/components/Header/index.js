@@ -1,5 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+
+import {
+    StyledHeader,
+    CloseIcon,
+    CloseIconContainer,
+    OnlineStatusContainer,
+    OnlineIcon
+} from './styles';
 
 function Header(props) {
     return(

@@ -1,21 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
-import {List, Avatar} from 'antd';
+import {List as ListAntd, Avatar} from 'antd';
+
+import { ListHeading, StyledList } from './styles';
 
 function List(props) {
     return(
         <StyledList>
             <ListHeading>Active Users</ListHeading>
-            <List
+            <ListAntd
                 itemLayout="horizontal"
                 dataSource={props.users}
                 renderItem={user => (
-                    <List.Item>
-                        <List.Item.Meta
+                    <ListAntd.Item>
+                        <ListAntd.Item.Meta
                             avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                             title={<a href="https://ant.design">{user.username}</a>}
                         />
-                    </List.Item>
+                    </ListAntd.Item>
                 )}
             />
         </StyledList>
