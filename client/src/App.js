@@ -21,24 +21,24 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route 
-          path="/join" 
-          component={() => 
-            <JoinRoom 
-              onJoinSuccess={onJoinSuccess} 
+        <Route
+          path="/join"
+          component={() =>
+            <JoinRoom
+              onJoinSuccess={onJoinSuccess}
             />
-          } 
+          }
         />
         <Redirect from="/" to="/join" exact />
-        <Route 
-          path="/chat/rooms/:roomNumber" 
-          component={() => 
-            <ChatRoom 
-                username={username} 
-                room={room} 
-                joinData={joinData} 
+        <Route
+          path="/chat/rooms/:roomNumber"
+          component={() =>
+            <ChatRoom
+              username={username}
+              room={room}
+              joinData={joinData}
             />
-          } 
+          }
         />
       </Switch>
     </div>

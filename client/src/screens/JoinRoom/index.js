@@ -7,7 +7,7 @@ function JoinRoom(props) {
     const [username, setUsername] = useState('');
     const [room, setRoom] = useState('');
     const [error, setError] = useState('');
-    
+
     const onUsernameChange = e => {
         const inputValue = e.target.value;
         setUsername(inputValue);
@@ -35,7 +35,7 @@ function JoinRoom(props) {
         }
     }
 
-    return(
+    return (
         <StyledCard>
             <label htmlFor="username">
                 Enter your name
