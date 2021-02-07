@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { Input, Card, Button } from 'antd';
+import { Input } from 'antd';
+
 import { socket } from '../../config/web-sockets';
+import { StyledButton, StyledCard } from './styles';
 
 function JoinRoom(props) {
     const [username, setUsername] = useState('');
@@ -69,15 +70,3 @@ function JoinRoom(props) {
 }
 
 export default JoinRoom;
-
-const StyledCard = styled(Card)`
-    width: 581px;
-    height: 210px;
-    margin: 30vh auto;
-    box-shadow: 2px 3px 3px 2.8px #d7d7e4;
-    text-align: center;
-`;
-
-const StyledButton = styled(Button)`
-    margin-top: 10px;
-`;
