@@ -5,9 +5,7 @@ function Message(props) {
     const { username, message: { user, text } } = props;
     let sentByCurrentUser = false;
 
-    const trimmedName = username.trim().toLowerCase();
-
-    if (user === trimmedName) {
+    if (user === username) {
         sentByCurrentUser = true;
     }
 
@@ -22,10 +20,10 @@ function Message(props) {
                 <MessageText color={textColor}>
                     {text}
                 </MessageText>
-                <SentBy sentBy={sentBy}>
-                    {user}
-                </SentBy>
             </MessageBox>
+            <SentBy sentBy={sentBy}>
+                {user}
+            </SentBy>
         </MessagesContainer>
     );
 }
