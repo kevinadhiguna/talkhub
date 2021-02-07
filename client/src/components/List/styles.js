@@ -14,11 +14,11 @@ export const StyledList = styled(List)`
     a {
         color: #097ef0;
     }
-`
+`;
 
 export const ListHeading = styled.div`
     color: #757591;
     font-size: 20px;
     font-style: oblique;
     border-bottom: 1px solid #757591;
-`
+`;

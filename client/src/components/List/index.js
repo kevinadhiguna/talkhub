@@ -1,10 +1,10 @@
 import React from 'react';
-import {List as ListAntd, Avatar} from 'antd';
+import { List as ListAntd, Avatar } from 'antd';
 
 import { ListHeading, StyledList } from './styles';
 
 function List(props) {
-    return(
+    return (
         <StyledList>
             <ListHeading>Active Users</ListHeading>
             <ListAntd

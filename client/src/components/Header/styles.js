@@ -8,13 +8,14 @@ export const StyledHeader = styled.div`
     border-radius: 4px 4px 0 0;
     height: 60px;
     width: 100%;
-`
+`;
+
 export const OnlineStatusContainer = styled.div`
     flex: 0.5;
     display: flex;
     align-items: center;
     margin-left: 5%;
-    color: white;
+    color: #fff;
 `;
 
 export const CloseIconContainer = styled.div`
