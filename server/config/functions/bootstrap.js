@@ -22,8 +22,8 @@ module.exports = () => {
         }
     });
 
-    io.on('connection', function(socket) {
-        socket.on('join', async({username, room}, callback) => {
+    io.on('connection', function (socket) {
+        socket.on('join', async ({ username, room }, callback) => {
             try {
                 const userExists = await findUser(username, room);
 
@@ -62,7 +62,7 @@ module.exports = () => {
             }
         });
 
-        socket.on('sendMessage', async(data, callback) => {
+        socket.on('sendMessage', async (data, callback) => {
             try {
                 const user = await userExists(data.userId);
 
@@ -80,7 +80,7 @@ module.exports = () => {
             }
         });
 
-        socket.on('disconnect', async(data) => {
+        socket.on('disconnect', async (data) => {
             try {
                 const user = await deleteUser(socket.id);
 

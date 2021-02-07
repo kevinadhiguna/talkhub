@@ -10,10 +10,10 @@ async function findUser(username, room) {
 async function createUser({ username, room, status, socketId }) {
     try {
         const user = await strapi.services.users.create({
-           username,
-           room,
-           status,
-           socketId 
+            username,
+            room,
+            status,
+            socketId
         });
         return user;
     } catch (err) {
